@@ -1,4 +1,4 @@
-name: action plan for docker
+name: ci
 
 on:
   push:
@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: AVA-Seenu/Testing/Dockerfile
+          file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/For dockerhub:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
